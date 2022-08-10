@@ -1,0 +1,125 @@
+/* remover todos os espaços e preenchimentos da página:
+- margem: 0 e preenchimento:0
+- mais para frente serão adicionados os espaçamentos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*inserindo cor no fundo da página:
+  - hexadecimal: vai do 0-F
+    - 0 = preto
+    - F = branco */
+body {
+    background: #FFEDD5;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*remover os estilos (dots) das listas:
+  - list-style: none */
+ul {
+    list-style: none;
+}
+
+/* - adicionar fonte serifada em alguns títulos */
+
+h1,
+h2,
+h3,
+.price {
+  font-family: 'Roboto Serif', serif;
+  text-transform: uppercase;
+  color: #2D2C2A
+}
+
+/* alinhar o texto com text-align: center
+- preenchimento interno 32px em cima e embaixo, 0 nas laterais
+*/
+header {
+    padding: 32px 0;
+    text-align: center;
+}
+
+/* inserir margem no cabeçalho e seção (header e no section)
+- margin: 0 (em cima e embaixo, auto (laterais)
+*/  
+header,
+section {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* - inserir espaçamento abaixo do título principal
+   - as informações de fonte e linha foram retiradas do projeto disponibilizado no Figma
+ */
+header h1 {
+    margin-bottom: 4px;
+    font-size: 28px;
+    line-height: 33px;
+}
+
+/* - inserir uma cor diferente para a segunda palavra do título 
+    - usando a tag span para diferenciar as palavras sem quebrar a linha */
+header h1 span {
+    color: #995000;
+}
+
+/* - inserir tamanho da fonte e altura da linha no subtítulo
+   - as informações de fonte e linha foram retiradas do projeto disponibilizado no Figma*/
+header p {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* - inserir espaçamento entre as seções de 24px */
+section {
+    margin-bottom: 24px;  
+}
+
+/* - inserir background ao redor do texto "brunch"
+   - inserir preenchimento ao redor do texto: 8px em cima e embaixo e 16px nas laterais
+   - inserir alinhamento centralizado no texto
+   - inserir espaçamento abaixo do texto de 24px
+*/
+section h2 {
+    background-color: #FED7AA;
+    padding: 8px 16px;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 18px;
+}
+
+/* - inserir espaçamento entre as caixas de texto (cada lista) de 16px
+   - alinhar os textos um ao lado do outro usando o pai das listas (ul) e indicar as listas (li)
+   - todas as listas serão alteradas igualmente 
+   - inserir o display: flex para que o nome e descrição (caixa de texto) fiquem ao lado do preço (caixa de texto) 
+*/
+ul li {
+    margin-bottom: 16px;
+    display: flex;
+}
+
+/* - inserir espaçamento máximo da caixa details (nome do produto) */  
+li .details {
+    max-width: 240px;
+}
+
+/* - inserir espaçamento entre nome do produto e descrição */
+.details h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* - inserir a cor no texto da descrição dos produtos
+   - essa cor foi retirada do arquivo do figma desse protótipo
+   - rgba= red, blue, green, alpha
+   - o alpha se refere a transparência da cor
+   - o alpha vai de 0 à 1, neste caso 0.6 representa 60% de cor
+*/
+.details p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+
